@@ -41,6 +41,7 @@ app.get("/products", async (req, resp) => {
   } else {
     resp.send({ result: "No Products found" });
   }
+  console.log(products)
 });
 
 app.delete("/product/:id", async (req, resp) => {
@@ -71,7 +72,7 @@ app.get("/search/:key", async (req, resp) => {
       { name: { $regex: req.params.key } },
       { company: { $regex: req.params.key } },
       { category: { $regex: req.params.key } }
-    ],
+    ], 
   });
   resp.send(result);
 });

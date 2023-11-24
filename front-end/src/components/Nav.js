@@ -1,5 +1,3 @@
-// import { clear } from '@testing-library/user-event/dist/clear';
-// import React from 'react';
 import React from 'react';
 import { Link, useNavigate} from 'react-router-dom';
 
